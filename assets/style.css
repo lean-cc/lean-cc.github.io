@@ -1,0 +1,484 @@
+@import url('font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(47, 47, 47);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 40, 40);
+}
+
+body {
+    background-color: black;
+    color: white;
+    user-select: none;
+}
+
+a:not(.repo, nav a) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: silver;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .2s;
+}
+
+a:not(.repo, nav a):hover {
+    color: grey;
+}
+
+main {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn .3s;
+    padding: 15px 25px;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background-color: #080808;
+    width: 100%;
+    max-width: 1000px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 2px solid #1e1e1e;
+}
+
+nav .logo {
+    padding: 5px;
+}
+
+nav .logo:hover {
+    background-color: unset;
+}
+
+#personal-logo {
+    line-height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+#personal-logo span {
+    font-family: monospace;
+    color: lightgray;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+}
+
+nav .logo h1 {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: silver;
+    font-weight: 500;
+    padding: 10px 12px;
+    transition: all .2s;
+}
+
+nav a:hover {
+    color: #8348e2;
+    background-color: #151515;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: silver;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+section[id='home'] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+    gap: 80px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+section[id='home'] div p {
+    color: lightgrey;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+section[id='home'] div a {
+    width: fit-content;
+    font-weight: 700;
+    color: rgb(230, 230, 230);
+    font-size: 16x;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+section[id='home'] div a svg {
+    width: 25px;
+}
+
+section[id='home'] div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section[id='home'] div:nth-child(2) img {
+    border-radius: 10px;
+    width: 100%;
+    min-width: 420px;
+    transition: transform .5s;
+}
+
+section[id='home'] div:nth-child(2) img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+section[id='projects'] {
+    width: 100%;
+    max-width: 1000px;
+    min-height: calc(100vh - 110px);
+}
+
+section[id="about"] {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    gap: 70px;
+}
+
+section[id="about"] .worked {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section[id="about"] .worked div p {
+    display: flex;
+    gap: 10px;
+    color: darkgrey;
+}
+
+section[id="about"] .worked div .role {
+    color: rgb(212, 212, 212);
+}
+
+section[id="about"] .worked div b {
+    color: white;
+}
+
+section[id="about"] div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: calc(500px - 70px);
+}
+
+section[id="about"] div:last-child {
+    width: fit-content;
+}
+
+section[id="about"] div p {
+    color: #d6d6d6;
+    font-weight: 500;
+}
+
+section[id="about"] h2 {
+    font-size: 18px;
+    color: #959595;
+}
+
+.view {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #1e1e1e;
+    gap: 5px;
+}
+
+.view a svg {
+    width: 20px;
+}
+
+.view div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.view div h1 {
+    font-size: 30px;
+}
+
+.view div h3 {
+    font-size: 20px;
+    color: lightgrey;
+}
+
+.projects>div:first-child:after {
+    content: 'NEW';
+    background-color: goldenrod;
+    position: absolute;
+    left: 0;
+    height: fit-content;
+    color: #151515;
+    border-radius: 10px 0 0 0;
+    font-weight: 700;
+    padding: 3px 5px;
+}
+
+.projects>div:first-child {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    height: fit-content;
+    max-width: 100%;
+    gap: 20px;
+}
+
+.projects>div:first-child .img-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: unset;
+    margin-bottom: unset;
+    margin: auto;
+    padding: 30px;
+}
+
+.projects>div:first-child img {
+    object-fit: scale-down;
+    pointer-events: none;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+.projects div:first-child .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects>div {
+    width: 100%;
+    border-radius: 10px;
+    max-width: calc(328px - 15px);
+    background-color: #151515;
+    border: 2px solid #1e1e1e;
+}
+
+.projects div .img-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: -25px;
+}
+
+.projects div img {
+    object-fit: scale-down;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.projects div .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.projects div .content .links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.projects div .content a {
+    font-weight: 700;
+    color: rgb(230, 230, 230);
+    font-size: 14px;
+}
+
+.projects div .content a svg {
+    width: 20px;
+}
+
+.projects div .content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.projects div .content p {
+    font-weight: 500;
+    color: silver;
+}
+
+.title {
+    background-image: linear-gradient(to right, #b84ceb, #8348e2, #5248e2, #b84ceb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 40px;
+    background-size: 200% 100%;
+    animation: gradientMove 12s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 200% 0%;
+    }
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        gap: 0;
+        background-color: #080808;
+        border-bottom: 1px solid #1e1e1e;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background-color: unset;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .view {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .projects div:first-child {
+        flex-wrap: wrap;
+    }
+
+    .projects div:first-child .content {
+        padding-top: 0px;
+    }
+
+    .projects>div {
+        max-width: unset;
+    }
+
+    .projects>div:first-child img {
+        max-width: 300px;
+        min-width: unset;
+    }
+
+    section[id="about"] {
+        justify-content: center;
+    }
+
+    section[id="home"] {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    section[id="home"] div:nth-child(2) img {
+        min-width: 225px !important;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    section[id="home"] div:nth-child(2) img {
+        min-width: 300px;
+    }
+
+    nav .logo {
+        padding: 5px 15px;
+    }
+}
