@@ -1,6 +1,6 @@
 <h1 align="center">
  <br>
-    <a target="_blank" href="https://kars.is-a.dev">
+    <a target="_blank" href="https://kars.is-a.dev">kars.is-a.dev</a>
  <br>
 </h1>
 
@@ -10,7 +10,7 @@
  <a href="#credits">Credits</a>
 </p>
 
-![image](https://github.com/lean-cc/Fieldlab/assets/114680621/09b0394b-f46e-406e-9724-06ac8efafebf)
+![image](https://github.com/lean-cc/lean-cc.github.io/assets/114680621/5583cc98-ee4f-4e13-8edd-d8df7c8c8ccf)
 
 ## Credits
 
