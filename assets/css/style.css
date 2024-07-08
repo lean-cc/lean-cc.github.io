@@ -176,8 +176,8 @@ section[id='home'] div:nth-child(1) {
     font-weight: 400;
     font-style: normal;
     font-size: 250px;
-    line-height: 230px;
-    margin-top: 5px;
+    line-height: 210px;
+    margin-top: 15px;
     transition: transform .5s;
 }
 
