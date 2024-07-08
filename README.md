@@ -1,6 +1,6 @@
 <h1 align="center">
  <br>
-    <a target="_blank" href="https://kars.is-a.dev">kars.is-a.dev</a>
+    <a href="https://kars.is-a.dev">kars.is-a.dev</a>
  <br>
 </h1>
 
